@@ -1,0 +1,53 @@
+#Escanear un solo host:
+nikto -h <hostname>
+
+#Escanear varios hosts desde archivo:
+nikto -h <file.txt>
+
+#Escanear un host en puerto específico:
+nikto -h <hostname> -p <port>
+
+#Escanear host utilizando proxy:
+nikto -h <hostname> -useproxy http://<proxy_ip>:<proxy_port>
+
+#Escanear host en modo silencioso:
+nikto -h <hostname> -output <output_file> -Format txt -silent
+
+#Escanear un host y exportar los resultados a un archivo HTML:
+nikto -h <hostname> -output <output_file> -Format html
+
+#Escanear un host con autenticación básica:
+nikto -h <hostname> -id <username>:<password>
+
+#Escanear un host utilizando SSL:
+nikto -h <hostname> -ssl
+
+#Escanear un host utilizando un archivo de configuración personalizado:
+nikto -h <hostname> -config <config_file>
+
+#Escanear un host y realizar una actualización del motor de plugins:
+nikto -h <hostname> -update
+
+#Escanear un host utilizando autenticación NTLM:
+nikto -h <hostname> -id <domain><username>:<password>
+
+#Escanear un host con autenticación de cliente SSL:
+nikto -h <hostname> -clientcert <certificate_file>
+
+#Escanear un host y limitar el tiempo de ejecución del escaneo:
+nikto -h <hostname> -maxtime <time_in_seconds>
+
+#Escanear un host y habilitar la prueba de falsos positivos:
+nikto -h <hostname> -Tuning <falso_positivo>
+
+#Escanear un host y desactivar la verificación de certificado SSL:
+nikto -h <hostname> -ssl -sslverify
+
+#Escanear un host y mostrar solo la información de la versión del servidor:
+nikto -h <hostname> -Versioning 1
+
+#Escanear un host y habilitar el seguimiento de redirecciones HTTP:
+nikto -h <hostname> -redirect
+
+#Escanear host y habilitar comprobación de archivos robots.txt:
+nikto -h <hostname> -C all
