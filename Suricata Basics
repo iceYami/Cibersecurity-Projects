@@ -1,0 +1,20 @@
+#Iniciar Suricata en modo de escucha en una interfaz de red:
+suricata -c <config_file> -i <interface>
+#Iniciar Suricata en modo de lectura de un archivo de captura:
+suricata -c <config_file> -r <capture_file>
+#Mostrar la versión de Suricata instalada:
+suricata -V
+#Ejecutar Suricata en segundo plano:
+suricata -c <config_file> -i <interface> -D
+#Probar la configuración de Suricata:
+suricata -c <config_file> -T
+#Iniciar Suricata con un archivo de registro personalizado:
+suricata -c <config_file> -i <interface> -l <log_directory>
+#Actualizar las reglas de Suricata:
+suricata-update
+#Verificar la integridad de las reglas de Suricata:
+suricatasc -c verify-rules
+#Detener Suricata:
+suricatasc -c shutdown
+#Reiniciar Suricata:
+suricatasc -c reload-rules
