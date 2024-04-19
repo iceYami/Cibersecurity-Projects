@@ -1,0 +1,22 @@
+#Escanear un solo host:
+nmap <IP_o_nombre_host>
+#Escanear un rango de direcciones IP:
+nmap <IP_inicio>-<IP_fin>
+#Escanear un conjunto de hosts utilizando un archivo de lista:
+nmap -iL <archivo_lista>
+#Escanear un rango de puertos específico:
+nmap -p <puerto_inicio>-<puerto_fin> <IP_o_nombre_host>
+#Escanear todos los puertos comunes:
+nmap -p- <IP_o_nombre_host>
+#Escanear utilizando un script de NSE:
+nmap --script <nombre_script> <IP_o_nombre_host>
+#Escanear utilizando un script de NSE con opciones personalizadas:
+nmap --script <nombre_script> --script-args <argumentos> <IP_o_nombre_host>
+#Realizar un escaneo rápido sin resolver DNS:
+nmap -T4 -F <IP_o_nombre_host>
+#Realizar un escaneo detallado con detección de sistemas operativos y versiones de servicios:
+nmap -A <IP_o_nombre_host>
+#Realizar un escaneo de red completo (requiere privilegios de root):
+sudo nmap -sS -sU -p- -T4 -A <IP_o_nombre_red>
+#Escanear red y guardar la salida en un archivo:
+nmap -oN <archivo_salida> <IP_o_nombre_red>
