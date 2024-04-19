@@ -1,0 +1,44 @@
+Buscar módulos en la base de datos de Metasploit:
+search <keyword>
+
+Seleccionar un módulo para su uso:
+use <module_path>
+
+Mostrar las opciones disponibles para el módulo seleccionado:
+show options
+
+Establecer el valor de una opción para el módulo:
+set <option> <value>
+
+Ejecutar el exploit con las opciones especificadas:
+exploit
+
+Ejecutar el módulo actual:
+run
+
+Listar las sesiones activas:
+sessions
+
+Interactuar con una sesión específica:
+sessions -i <session_id>
+
+Poner en segundo plano una sesión interactiva:
+background
+
+Configurar Metasploit como un manejador para recibir conexiones de backdoors:
+use exploit/multi/handler
+
+Establecer el payload a utilizar:
+set PAYLOAD <payload_name>
+
+Especificar la dirección IP del host local:
+set LHOST <local_IP_address>
+
+Especificar el puerto para la conexión:
+set LPORT <port_number>
+
+Ejecutar el exploit en segundo plano:
+exploit -j
+
+Utilizar módulos post-exploit:
+use post/<module_name>
