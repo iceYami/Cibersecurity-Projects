@@ -1,35 +1,35 @@
-Escanear un Rango de IPs:
+#Escanear un Rango de IPs:
 omp -u username -w password -T 10.0.0.0/24 -t Full_and_Fast
 
-Ver Resultados del Escaneo:
+#Ver Resultados del Escaneo:
 omp -u username -w password -G
 
-Escanear Host Específico:
+#Escanear Host Específico:
 omp -u username -w password -T 10.0.0.1 -t Full_and_Fast
 
-Detalles de Escaneo:
+#Detalles de Escaneo:
 omp -u username -w password -G <task_id>
 
-Escaneo desde Plantilla:
+#Escaneo desde Plantilla:
 omp -u username -w password --create-target="10.0.0.1" --template="Full and fast"
 
-Escanear Target con una Configuración Personalizada:
+#Escanear Target con una Configuración Personalizada:
 omp -u username -w password -T 10.0.0.1 --config=example_config
 
-Crear Reporte en PDF:
+#Crear Reporte en PDF:
 omp -u username -w password --get-report <report_id> --format PDF --output report.pdf
 
-Ver Lista de Reportes:
+#Ver Lista de Reportes:
 omp -u username -w password -R
 
-Exportar Resultados a CSV:
+#Exportar Resultados a CSV:
 omp -u username -w password --get-results <task_id> --output-format=csv --output-file=results.csv
 
-Modificar Target:
+#Modificar Target:
 omp -u username -w password -M <target_id> --name="Nuevo Nombre"
 
-Eliminar Target:
+#Eliminar Target:
 omp -u username -w password -X <target_id>
 
-Detener Escaneo en Progreso:
+#Detener Escaneo en Progreso:
 omp -u username -w password -S <task_id>
