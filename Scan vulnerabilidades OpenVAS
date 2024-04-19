@@ -13,5 +13,5 @@ sudo omp -u admin -w <password> --get-task <task_id>
 sudo omp -u admin -w <password> --get-tasks
 sudo omp -u admin -w <password> --xml='<get_reports report_id="task_id" format_id="c1645568-627a-11e3-a660-406186ea4fc5"/>' -R <task_id>
 
-# reemplazar <password> por password de admin
-# reemplazar <task_id> por ID del escaneo
+# <password> = password de admin
+# <task_id> = ID del escaneo
