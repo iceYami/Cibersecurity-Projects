@@ -1,6 +1,6 @@
 import itertools
 numeros = "0123456789"
-letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 caracteres_especiales = "%!~@#$/?"
 variables = [numeros, letras, caracteres_especiales]
 with open("diccionario_nlce.txt", "w") as archivo:
@@ -9,4 +9,3 @@ with open("diccionario_nlce.txt", "w") as archivo:
         for combinacion in combinaciones:
             linea = "".join(combinacion) + "\n"
             archivo.write(linea)
-
